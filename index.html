@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Isometric Space MVP</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="hud">
+    <div id="hud-left" class="panel">
+      <div class="title">SHIP HUD</div>
+      <div id="status" class="mono"></div>
+      <div id="hint" class="hint"></div>
+    </div>
+
+    <div id="hud-right" class="panel">
+      <div class="title">CONTROLS</div>
+      <div class="mono" id="controls">
+        WASD / Arrows — Thrust<br />
+        Shift — Boost<br />
+        Space — Brake<br />
+        E — Interact<br />
+        N — New Game
+      </div>
+    </div>
+
+    <div id="hud-log" class="panel">
+      <div class="title">LOG</div>
+      <pre id="log" class="mono"></pre>
+    </div>
+  </div>
+
+  <canvas id="game" width="960" height="540"></canvas>
+  <script src="main.js"></script>
+</body>
+</html>

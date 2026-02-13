@@ -1,0 +1,83 @@
+html, body {
+  margin: 0;
+  height: 100%;
+  background: #05060a;
+  color: #e8e8e8;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+}
+
+/* canvas */
+#game {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+  image-rendering: pixelated;
+}
+
+/* HUD overlay */
+#hud {
+  position: fixed;
+  inset: 0;
+  pointer-events: none; /* don't block canvas input */
+  z-index: 10;
+}
+
+/* Shared panel styling */
+.panel {
+  position: absolute;
+  background: rgba(10, 12, 18, 0.68);
+  border: 1px solid rgba(255,255,255,0.10);
+  border-radius: 10px;
+  padding: 10px 12px;
+  backdrop-filter: blur(6px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+  text-shadow: 0 1px 0 rgba(0,0,0,0.6);
+}
+
+.title {
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.65);
+  margin-bottom: 8px;
+}
+
+.mono {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+  font-size: 12px;
+  line-height: 1.35;
+  color: rgba(255,255,255,0.88);
+}
+
+.hint {
+  margin-top: 8px;
+  font-size: 12px;
+  color: rgba(180, 220, 255, 0.95);
+}
+
+/* Layout positions */
+#hud-left {
+  top: 12px;
+  left: 12px;
+  width: 320px;
+}
+
+#hud-right {
+  top: 12px;
+  right: 12px;
+  width: 240px;
+}
+
+#hud-log {
+  right: 12px;
+  bottom: 12px;
+  width: 380px;
+  max-height: 220px;
+  overflow: hidden;
+}
+
+/* Log formatting */
+#log {
+  margin: 0;
+  white-space: pre-wrap;
+}
